@@ -1,0 +1,25 @@
+# 참고
+# https://spring.io/guides/gs/centralized-configuration/
+#
+server:
+  port: 8082
+
+spring:
+  application:
+    name: gift
+
+  config:
+    import: optional:configserver:http://localhost:8888/
+
+  profiles:
+    active: dev
+# 아래 안됨 ㅠㅠ
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: refresh

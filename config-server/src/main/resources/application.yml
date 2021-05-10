@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///Users/ddori/project/study/cloud-config-file
+##        git:
+##          uri: git@hiphopddori:hiphopddori/config-private-properties.git
+#          skip-ssl-validation: true
+server:
+  port: 8888
+
+
